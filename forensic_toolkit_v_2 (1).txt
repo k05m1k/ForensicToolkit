@@ -1,0 +1,78 @@
+# 🛡️ Complete Forensic Toolkit v2
+
+## Overview
+A modular, open-source threat hunting and incident response toolkit designed for use in Microsoft Defender, Sentinel, and integrated SOC workflows. This version includes advanced telemetry queries, IOC automation, persistence analysis, memory acquisition guidance, and reporting templates.
+
+---
+
+## 🔍 Key Features
+- **Advanced KQL Scripts** (logons, processes, exfil, phishing)
+- **Email Analysis** using Python for .eml files
+- **IOC Live Feed Integration** via open-source threat intel (VirusTotal, AbuseIPDB, AlienVault OTX)
+- **Volatility + Plaso Forensics Guidance**
+- **MITRE ATT&CK Mapping** for all scripts
+- **Memory + Disk Acquisition Scripts**
+- **Sentinel + XSOAR Playbook Support**
+- **Risk Classification of Outputs**
+- **Incident Summary PDF Template**
+- **Atomic Red Team Validation Steps**
+
+---
+
+## 📁 Repository Structure
+```
+/forensic-toolkit-v2
+├── KQL_Scripts
+│   ├── access_persistence.kql
+│   ├── phishing_detection.kql
+│   └── mitre_mapped_queries.json
+├── Python_Scripts
+│   ├── parse_phishing_eml.py
+│   └── enrich_iocs_from_otx.py
+├── IOC_Integration
+│   ├── threat_feed_enrichment.py
+│   ├── fetch_from_virustotal.py
+│   └── fetch_from_abuseipdb.py
+├── Memory_Acquisition
+│   └── acquire_memory_win.bat
+├── Disk_Analysis
+│   └── plaso_timeline_command.txt
+├── Sentinel_Playbooks
+│   └── sentinel_playbook.json
+├── XSOAR_Playbooks
+│   └── xsoar_access_detection.yml
+├── Simulation_Tests
+│   └── atomic_red_team_validation.md
+├── Reporting
+│   ├── incident_summary_template.docx
+│   └── risk_scoring_guide.md
+└── README.md
+```
+
+---
+
+## 📖 Quick Start
+1. Clone this repository
+2. Run KQL scripts in Microsoft Defender / Sentinel
+3. Execute Python scripts to analyze email artifacts
+4. Use the IOC enrichment tools to dynamically gather intel on IPs/domains/hashes
+5. Import Sentinel/XSOAR playbooks into your SOAR platform
+6. Use the reporting templates to deliver findings
+
+---
+
+## 🧠 Planned Enhancements
+- [x] Dynamic IOC ingestion from VirusTotal, AbuseIPDB, AlienVault OTX
+- [ ] Jupyter notebook for incident correlation
+- [ ] Dashboard for timeline visualizations
+- [ ] GUI launcher for SOC analysts
+
+---
+
+## 🤝 Contributing
+We welcome pull requests, new detection logic, IOC packs, and playbooks!
+
+---
+
+## 📜 License
+MIT License
